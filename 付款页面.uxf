@@ -29,7 +29,7 @@
     <id>UMLGeneric</id>
     <coordinates>
       <x>216</x>
-      <y>162</y>
+      <y>144</y>
       <w>90</w>
       <h>36</h>
     </coordinates>
@@ -41,7 +41,7 @@
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>189</y>
+      <y>171</y>
       <w>27</w>
       <h>504</h>
     </coordinates>
@@ -52,7 +52,7 @@
     <id>Relation</id>
     <coordinates>
       <x>72</x>
-      <y>234</y>
+      <y>216</y>
       <w>207</w>
       <h>36</h>
     </coordinates>
@@ -64,7 +64,7 @@ paymentPage(orderId)</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>648</x>
-      <y>162</y>
+      <y>144</y>
       <w>99</w>
       <h>36</h>
     </coordinates>
@@ -76,7 +76,7 @@ paymentPage(orderId)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>693</x>
-      <y>189</y>
+      <y>171</y>
       <w>27</w>
       <h>504</h>
     </coordinates>
@@ -87,7 +87,7 @@ paymentPage(orderId)</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>396</x>
-      <y>486</y>
+      <y>468</y>
       <w>126</w>
       <h>36</h>
     </coordinates>
@@ -99,7 +99,7 @@ paymentPage(orderId)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>297</y>
+      <y>279</y>
       <w>468</w>
       <h>36</h>
     </coordinates>
@@ -111,7 +111,7 @@ getOrder(orderId)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>342</y>
+      <y>324</y>
       <w>468</w>
       <h>36</h>
     </coordinates>
@@ -123,7 +123,7 @@ order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>396</y>
+      <y>378</y>
       <w>468</w>
       <h>36</h>
     </coordinates>
@@ -135,7 +135,7 @@ getOrderItem(orderId)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>441</y>
+      <y>423</y>
       <w>468</w>
       <h>36</h>
     </coordinates>
@@ -147,7 +147,7 @@ orderItems : ArrayList</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>846</x>
-      <y>162</y>
+      <y>144</y>
       <w>90</w>
       <h>36</h>
     </coordinates>
@@ -160,7 +160,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>882</x>
-      <y>189</y>
+      <y>171</y>
       <w>27</w>
       <h>504</h>
     </coordinates>
@@ -171,7 +171,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>540</y>
+      <y>522</y>
       <w>657</w>
       <h>36</h>
     </coordinates>
@@ -183,7 +183,7 @@ makePayment(totalPrice)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>576</y>
+      <y>558</y>
       <w>657</w>
       <h>36</h>
     </coordinates>
@@ -195,12 +195,24 @@ isSuccessful : Boolean</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>252</x>
-      <y>621</y>
+      <y>603</y>
       <w>468</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 finishOrder(orderId)</panel_attributes>
     <additional_attributes>500.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>621</y>
+      <w>468</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+int</panel_attributes>
+    <additional_attributes>10.0;20.0;500.0;20.0</additional_attributes>
   </element>
 </diagram>
