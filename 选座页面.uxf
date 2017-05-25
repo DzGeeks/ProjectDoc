@@ -303,7 +303,7 @@ isLocked : Boolean</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-createOrderItem(phone, playSessionId, SeatIndex, timestamp)
+createOrderItem(phone, playSessionId, SeatIndex)
 如果之前 Order 已经存在 orderItem, 需要给这个 order 新增orderitem， 否则新建一个 order
 fg=red</panel_attributes>
     <additional_attributes>1040.0;20.0;10.0;20.0</additional_attributes>

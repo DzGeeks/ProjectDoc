@@ -39,7 +39,6 @@ CREATE TABLE `ActIn` (
 
 LOCK TABLES `ActIn` WRITE;
 /*!40000 ALTER TABLE `ActIn` DISABLE KEYS */;
-INSERT INTO `ActIn` VALUES (6,8),(11,12),(11,13),(11,14),(12,15),(12,16),(12,17);
 /*!40000 ALTER TABLE `ActIn` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,9 +52,8 @@ DROP TABLE IF EXISTS `Actor`;
 CREATE TABLE `Actor` (
   `actorId` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`actorId`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`actorId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +62,7 @@ CREATE TABLE `Actor` (
 
 LOCK TABLES `Actor` WRITE;
 /*!40000 ALTER TABLE `Actor` DISABLE KEYS */;
-INSERT INTO `Actor` VALUES (16,'asd'),(8,'dan'),(13,'dandan'),(7,'guo'),(14,'guoguo'),(1,'Lin'),(12,'linlin'),(17,'qwe'),(15,'zxc');
+INSERT INTO `Actor` VALUES (1,'Lin');
 /*!40000 ALTER TABLE `Actor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,7 +103,7 @@ CREATE TABLE `Cinema` (
   `name` varchar(200) NOT NULL,
   `phone` varchar(45) NOT NULL,
   PRIMARY KEY (`cinemaId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,6 +112,7 @@ CREATE TABLE `Cinema` (
 
 LOCK TABLES `Cinema` WRITE;
 /*!40000 ALTER TABLE `Cinema` DISABLE KEYS */;
+INSERT INTO `Cinema` VALUES (1,3,'mko','1222'),(2,2,'xcd','1244');
 /*!40000 ALTER TABLE `Cinema` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,9 +131,8 @@ CREATE TABLE `Film` (
   `name` varchar(45) NOT NULL,
   `score` double NOT NULL,
   `year` int(11) NOT NULL,
-  PRIMARY KEY (`filmId`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`filmId`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -143,7 +141,7 @@ CREATE TABLE `Film` (
 
 LOCK TABLES `Film` WRITE;
 /*!40000 ALTER TABLE `Film` DISABLE KEYS */;
-INSERT INTO `Film` VALUES (1,'qwe','lin',120,'qwe',9.8,2015),(2,'asd','guo',118,'asd',10,2017),(4,'haokan','linlin',45,'hehe',5.6,2012),(6,'haokan','linlin',45,'hehfe',5.6,2012),(10,'haokan','linlin',45,'hehfe123',5.6,2012),(11,'haokan','linlin',45,'hehfeada',5.6,2012),(12,'haokan','linlin',45,'bucuo',5.6,2012);
+INSERT INTO `Film` VALUES (1,'qwe','qwe',344,'mkmk',9.9,2013),(2,'ad','sd',12,'sds',10,2003),(3,'q','sd',1232,'zxzc',3.5,2012),(4,'qwe','we',12,'th',2.4,2010),(5,'asd','yh',3,'th',5.8,2020),(6,'zx','retg',4,'thrr',9.5,1992),(7,'qd','wtg',4,'rth',10,1995),(8,'v','eqv',4,'rbrbrb',8.7,2004),(9,'gebwr','evf',12,'bdsw',9.2,2003);
 /*!40000 ALTER TABLE `Film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -157,9 +155,8 @@ DROP TABLE IF EXISTS `FilmType`;
 CREATE TABLE `FilmType` (
   `typeId` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`typeId`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`typeId`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -168,6 +165,7 @@ CREATE TABLE `FilmType` (
 
 LOCK TABLES `FilmType` WRITE;
 /*!40000 ALTER TABLE `FilmType` DISABLE KEYS */;
+INSERT INTO `FilmType` VALUES (1,'dongzuo'),(2,'xiju');
 /*!40000 ALTER TABLE `FilmType` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,6 +193,7 @@ CREATE TABLE `HasType` (
 
 LOCK TABLES `HasType` WRITE;
 /*!40000 ALTER TABLE `HasType` DISABLE KEYS */;
+INSERT INTO `HasType` VALUES (1,1),(2,1);
 /*!40000 ALTER TABLE `HasType` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +212,7 @@ CREATE TABLE `OrderItem` (
   PRIMARY KEY (`itemId`),
   KEY `FK_8of0v88yrp7p3ksvsvroh9j0l` (`orderId`),
   CONSTRAINT `FK_8of0v88yrp7p3ksvsvroh9j0l` FOREIGN KEY (`orderId`) REFERENCES `myOrder` (`orderId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -222,6 +221,7 @@ CREATE TABLE `OrderItem` (
 
 LOCK TABLES `OrderItem` WRITE;
 /*!40000 ALTER TABLE `OrderItem` DISABLE KEYS */;
+INSERT INTO `OrderItem` VALUES (1,1,3,21),(2,1,3,2),(3,1,3,32),(4,1,2,3),(5,2,3,12);
 /*!40000 ALTER TABLE `OrderItem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,7 +245,7 @@ CREATE TABLE `PlaySession` (
   `roomId` varchar(45) NOT NULL,
   `startTime` varchar(45) NOT NULL,
   PRIMARY KEY (`playSessionId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -254,6 +254,7 @@ CREATE TABLE `PlaySession` (
 
 LOCK TABLES `PlaySession` WRITE;
 /*!40000 ALTER TABLE `PlaySession` DISABLE KEYS */;
+INSERT INTO `PlaySession` VALUES (1,1,'2013-02-03 00:00:00',2,0.9,'12:23',1,'en',12,'E121','10:23'),(2,2,'2015-12-01 00:00:00',3,1,'12:43',1,'34',11,'D123','12:3'),(3,1,'2014-03-04 00:00:00',2,0.95,'123:!@3',1,'23',34,'d23','12:!2');
 /*!40000 ALTER TABLE `PlaySession` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -271,7 +272,7 @@ CREATE TABLE `Seat` (
   `myrow` int(11) NOT NULL,
   `status` varchar(200) NOT NULL,
   PRIMARY KEY (`seatId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,6 +281,7 @@ CREATE TABLE `Seat` (
 
 LOCK TABLES `Seat` WRITE;
 /*!40000 ALTER TABLE `Seat` DISABLE KEYS */;
+INSERT INTO `Seat` VALUES (1,12,1,12,'001000');
 /*!40000 ALTER TABLE `Seat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,9 +295,11 @@ DROP TABLE IF EXISTS `myOrder`;
 CREATE TABLE `myOrder` (
   `orderId` int(11) NOT NULL AUTO_INCREMENT,
   `phone` varchar(45) NOT NULL,
+  `timeStamp` bigint(20) NOT NULL,
   `totalPrice` double NOT NULL,
+  `finished` int(11) NOT NULL,
   PRIMARY KEY (`orderId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -304,6 +308,7 @@ CREATE TABLE `myOrder` (
 
 LOCK TABLES `myOrder` WRITE;
 /*!40000 ALTER TABLE `myOrder` DISABLE KEYS */;
+INSERT INTO `myOrder` VALUES (1,'123',1233,12.2,0),(2,'123',3546,34,0);
 /*!40000 ALTER TABLE `myOrder` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -316,4 +321,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-24 23:51:29
+-- Dump completed on 2017-05-25 12:36:10
